@@ -152,7 +152,7 @@ while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_
 display_selected_word()
 
 # End of the game
-print("Game is over!")
+print("Sorry game is over!")
 
 
 
