@@ -27,6 +27,7 @@ wordDictionary =  ["apple", "banana", "grape", "orange", "strawberry", "watermel
          "sorbet", "gelato", "custard", "pudding", "buttermilk", "kefir", "paneer", "ricotta", "mozzarella",
          "cheddar", "gouda", "brie", "camembert", "roquefort", "gorgonzola", "parmesan", "bluecheese", "feta"]
 
+
 # Choose a random word from the dictionary
 randomWord = random.choice(wordDictionary)
 
@@ -115,6 +116,10 @@ current_letters_right = 0
 def letter_already_guessed(letter, guessedLetters):
     return letter in guessedLetters
 
+# Function to display the randomly selected word at the end of the game
+def display_selected_word():
+    print("The word was:", randomWord)
+
 # Main game loop
 while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_guess):
     print("\nLetters guessed so far:")
@@ -143,8 +148,11 @@ while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_
         current_letters_right = printWord(current_letters_guessed)
         printLines()
 
+# Display the selected word at the end of the game
+display_selected_word()
+
 # End of the game
-print ("Game is over!")
+print("Game is over!")
 
 
 
