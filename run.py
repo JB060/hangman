@@ -4,29 +4,8 @@ print("Welcome to Hangman")
 print("--------------------------------------------")
 
 # List of words for the game
-wordDictionary =  ["apple", "banana", "grape", "orange", "strawberry", "watermelon", "melon", "peach", "cherry", "blueberry",
-         "raspberry", "pineapple", "apricot", "blackberry", "cantaloupe", "coconut", "cranberry", "dragonfruit",
-         "fig", "grapefruit", "kiwi", "lemon", "lime", "mango", "nectarine", "papaya", "passionfruit", "pear",
-         "persimmon", "plum", "pomegranate", "quince", "tangerine", "avocado", "tomato", "carrot", "broccoli",
-         "spinach", "kale", "cabbage", "lettuce", "cauliflower", "radish", "turnip", "squash", "pumpkin", "zucchini",
-         "cucumber", "eggplant", "pepper", "onion", "garlic", "potato", "sweetpotato", "yam", "beet", "artichoke",
-         "asparagus", "celery", "corn", "peas", "greenbeans", "mushroom", "leek", "shallot", "scallion", "ginger",
-         "fennel", "parsley", "cilantro", "dill", "rosemary", "thyme", "oregano", "basil", "sage", "mint",
-         "lavender", "marjoram", "chives", "bayleaf", "tarragon", "savory", "coriander", "cardamom", "cinnamon",
-         "clove", "nutmeg", "paprika", "saffron", "turmeric", "vanilla", "anise", "allspice", "peppercorn",
-         "mustard", "sesame", "flax", "poppy", "chia", "quinoa", "barley", "oat", "rice", "wheat", "rye", "buckwheat",
-         "millet", "sorghum", "cornmeal", "teff", "amaranth", "spelt", "durum", "farro", "freekeh", "bulgur",
-         "kamut", "triticale", "fonio", "bread", "pasta", "noodle", "bagel", "biscuit", "croissant", "donut",
-         "muffin", "pretzel", "sandwich", "tortilla", "wrap", "pancake", "waffle", "cracker", "cookie", "pie",
-         "cake", "brownie", "cupcake", "scone", "soda", "juice", "tea", "coffee", "smoothie", "milkshake",
-         "lemonade", "beer", "wine", "cocktail", "vodka", "whiskey", "rum", "gin", "brandy", "champagne",
-         "cider", "liqueur", "mead", "sake", "tequila", "bacon", "sausage", "steak", "chicken", "turkey",
-         "duck", "beef", "pork", "lamb", "ham", "venison", "salmon", "tuna", "trout", "halibut", "cod",
-         "shrimp", "lobster", "crab", "oyster", "clam", "scallop", "mussel", "octopus", "squid", "cuttlefish",
-         "anchovy", "sardine", "herring", "mackerel", "milk", "cheese", "butter", "yogurt", "cream", "icecream",
-         "sorbet", "gelato", "custard", "pudding", "buttermilk", "kefir", "paneer", "ricotta", "mozzarella",
-         "cheddar", "gouda", "brie", "camembert", "roquefort", "gorgonzola", "parmesan", "bluecheese", "feta"]
-
+wordDictionary = ["graze", "tooth", "paper", "warning", "presentation", "nuclear", "parking", "performance", "surgeon", "trust", "denial",
+                  "bathroom", "campaign", "equation", "swipe", "discourage", "wine", "image", "snail", "management", "tray", "trail", "studio", "south"]
 
 # Choose a random word from the dictionary
 randomWord = random.choice(wordDictionary)
@@ -136,7 +115,6 @@ while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_
     
     # Check if the guessed letter is correct
     if (randomWord[current_guess_index] == letterGuessed):
-        print_hangman(amount_of_times_wrong)
         current_guess_index +=1
         current_letters_guessed.append(letterGuessed)
         current_letters_right = printWord(current_letters_guessed)
@@ -152,7 +130,9 @@ while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_
 display_selected_word()
 
 # End of the game
-print("Sorry game is over!")
+print("Game is over!")
+
+
 
 
 
