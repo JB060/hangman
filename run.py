@@ -91,8 +91,12 @@ current_guess_index = 0
 current_letters_guessed = []
 current_letters_right = 0
 
+# Function to check if the letter has been guessed before
+def letter_already_guessed(letter, guessedLetters):
+    return letter in guessedLetters
+
 # Main game loop
-while(amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_guess):
+while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_guess):
     print("\nLetters guessed so far:")
     for letter in current_letters_guessed:
         print(letter, end =" ")
@@ -100,16 +104,21 @@ while(amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
     # Prompt user for input
     letterGuessed = input("\nGuess a letter:")
     
+    # Check if the guessed letter has already been guessed
+    if letter_already_guessed(letterGuessed, current_letters_guessed):
+        print("You have already guessed that letter. Please guess a different letter.")
+        continue
+    
     # Check if the guessed letter is correct
     if (randomWord[current_guess_index] == letterGuessed):
         print_hangman(amount_of_times_wrong)
         current_guess_index +=1
-        current_letters_guessed .append(letterGuessed)
-        current_letters_right =  (current_letters_guessed)
+        current_letters_guessed.append(letterGuessed)
+        current_letters_right = printWord(current_letters_guessed)
         printLines()
     else:
-        amount_of_times_wrong +=1 
-        current_letters_guessed .append(letterGuessed)
+        amount_of_times_wrong += 1
+        current_letters_guessed.append(letterGuessed)
         print_hangman(amount_of_times_wrong)
         current_letters_right = printWord(current_letters_guessed)
         printLines()
