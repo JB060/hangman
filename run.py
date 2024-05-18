@@ -20,19 +20,19 @@ def print_hangman(wrong):
         print ("    |")
         print ("    |")
         print ("   ===")
-     elif(wrong == 1):
-          print ("/n+---+")
+      elif(wrong == 1):
+        print ("/n+---+")
         print ("O   |")
         print ("    |")
         print ("    |")
         print ("   ===")
-     elif(wrong == 2):
+      elif(wrong == 2):
         print ("/n+---+")
         print ("O   |")
         print ("|   |")
         print ("    |")
         print ("   ===")
-     elif(wrong == 3):
+      elif(wrong == 3):
         print ("/n+---+")
         print (" O   |")
         print ("/|   |")
@@ -62,6 +62,35 @@ def print_hangman(wrong):
         print ("/|\   |")
         print ("/ \   |")
         print ("   ===")
+      
+   def printWord("guessedLetters"):
+      counter=0
+      rightLetters=0
+      for char in randomWord:
+         if (char in guessedLetters):
+            print(randomWord[counter], end=" ")
+            rightLetters+=1
+         else:
+           print(" ", end=" ")
+         counter +=1
+      return rightLetters
+
+   def printLines():
+     print("\r")
+     for char in randomWord
+      print("\u203E", end=" ")
+
+   lenght_of_of_word_to_guess = len(randomWord)
+   amount_of_times_wrong = 0
+   current_guess_index = 0
+
+
+
+      
+         
+        
+
+
 
    
     
