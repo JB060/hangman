@@ -1,11 +1,27 @@
 import random
 
+def print_rules():
+    print("\nHangman Rules:")
+    print("1. The computer randomly selects a word from a predefined list.")
+    print("2. You will try to guess the word one letter at a time.")
+    print("3. Each correct guess will reveal the letter in the word.")
+    print("4. Each incorrect guess will draw a part of the hangman figure.")
+    print("5. You have a limited number of incorrect guesses (7).")
+    print("6. The game ends when you either guess the word correctly or the hangman is fully drawn.")
+    print("Good luck!\n")
+
 print("Welcome to Hangman")
 print("--------------------------------------------")
 
+# Ask if the user wants to see the rules
+see_rules = input("Would you like to see the rules? (yes/no): ").strip().lower()
+if see_rules == 'yes':
+    print_rules()
+
 # List of words for the game
-wordDictionary = ["graze", "tooth", "paper", "warning", "presentation", "nuclear", "parking", "performance", "surgeon", "trust", "denial",
-                  "bathroom", "campaign", "equation", "swipe", "discourage", "wine", "image", "snail", "management", "tray", "trail", "studio", "south"]
+wordDictionary = ["graze", "tooth", "paper", "warning", "presentation", "nuclear", "parking", "performance", "surgeon",
+                  "trust", "denial", "bathroom", "campaign", "equation", "swipe", "discourage", "wine", "image", "snail", "management",
+                  "tray", "trail", "studio", "south"]
 
 # Choose a random word from the dictionary
 randomWord = random.choice(wordDictionary)
@@ -13,6 +29,7 @@ randomWord = random.choice(wordDictionary)
 # Print initial underscores for the word to guess
 for x in randomWord:
     print("_", end=" ")
+print("\n")
 
 # Function to print the hangman figure based on the number of wrong guesses
 def print_hangman(wrong):
@@ -71,23 +88,23 @@ def printWord(guessedLetters):
     rightLetters = 0
     for char in randomWord:
         if char in guessedLetters:
-            print(randomWord[counter], end=" ")
+            print(char, end=" ")
             rightLetters += 1
         else:
-            print(" ", end=" ")
+            print("_", end=" ")
         counter += 1
     return rightLetters
 
 # Function to print lines underneath the word
 def printLines():
-    print("\r")
+    print("\n")
     for char in randomWord:
         print("\u203E", end=" ")
+    print("\n")
 
 # Length of the word to guess
 length_of_word_to_guess = len(randomWord)
 amount_of_times_wrong = 0
-current_guess_index = 0
 current_letters_guessed = []
 current_letters_right = 0
 
@@ -100,22 +117,21 @@ def display_selected_word():
     print("The word was:", randomWord)
 
 # Main game loop
-while(amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_guess):
+while amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_guess:
     print("\nLetters guessed so far:")
     for letter in current_letters_guessed:
-        print(letter, end =" ")
-    
+        print(letter, end=" ")
+
     # Prompt user for input
-    letterGuessed = input("\nGuess a letter:")
-    
+    letterGuessed = input("\nGuess a letter: ").strip().lower()
+
     # Check if the guessed letter has already been guessed
     if letter_already_guessed(letterGuessed, current_letters_guessed):
         print("You have already guessed that letter. Please guess a different letter.")
         continue
-    
+
     # Check if the guessed letter is correct
-    if (randomWord[current_guess_index] == letterGuessed):
-        current_guess_index +=1
+    if letterGuessed in randomWord:
         current_letters_guessed.append(letterGuessed)
         current_letters_right = printWord(current_letters_guessed)
         printLines()
@@ -131,6 +147,8 @@ display_selected_word()
 
 # End of the game
 print("Game is over!")
+
+
 
 
 
