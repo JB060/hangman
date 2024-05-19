@@ -8,6 +8,7 @@ def print_rules():
     print("4. Each incorrect guess will draw a part of the hangman figure.")
     print("5. You have a limited number of incorrect guesses (7).")
     print("6. The game ends when you either guess the word correctly or the hangman is fully drawn.")
+    print("7. You can ask for a hint if you are stuck, but use them wisely!")
     print("Good luck!\n")
 
 print("Welcome to Hangman")
@@ -18,13 +19,36 @@ see_rules = input("Would you like to see the rules? (yes/no): ").strip().lower()
 if see_rules == 'yes':
     print_rules()
 
-# List of words for the game
-wordDictionary = ["graze", "tooth", "paper", "warning", "presentation", "nuclear", "parking", "performance", "surgeon",
-                  "trust", "denial", "bathroom", "campaign", "equation", "swipe", "discourage", "wine", "image", "snail", "management",
-                  "tray", "trail", "studio", "south"]
+# Dictionary of words and their hints for the game
+wordDictionary = {
+    "graze": "What cows do in a field.",
+    "tooth": "Found in your mouth, used for chewing.",
+    "paper": "You write on it.",
+    "warning": "A cautionary notice.",
+    "presentation": "A display or demonstration of information.",
+    "nuclear": "Related to atomic energy.",
+    "parking": "Finding a space for your car.",
+    "performance": "How well someone does something.",
+    "surgeon": "A doctor who performs operations.",
+    "trust": "Reliance on someone or something.",
+    "denial": "Refusing to accept reality.",
+    "bathroom": "A room for bathing.",
+    "campaign": "A series of actions to achieve a goal.",
+    "equation": "A mathematical statement.",
+    "swipe": "A swift movement or to steal.",
+    "discourage": "To make someone less confident.",
+    "wine": "An alcoholic drink made from grapes.",
+    "image": "A visual representation.",
+    "snail": "A slow-moving mollusk.",
+    "management": "The process of dealing with people or things.",
+    "tray": "A flat container for carrying items.",
+    "trail": "A path or track.",
+    "studio": "A place for recording or creating art.",
+    "south": "One of the cardinal directions."
+}
 
 # Choose a random word from the dictionary
-randomWord = random.choice(wordDictionary)
+randomWord, hint = random.choice(list(wordDictionary.items()))
 
 # Print initial underscores for the word to guess
 for x in randomWord:
@@ -123,7 +147,11 @@ while amount_of_times_wrong != 7 and current_letters_right != length_of_word_to_
         print(letter, end=" ")
 
     # Prompt user for input
-    letterGuessed = input("\nGuess a letter: ").strip().lower()
+    letterGuessed = input("\nGuess a letter or type 'hint' for a hint: ").strip().lower()
+
+    if letterGuessed == 'hint':
+        print(f"Hint: {hint}")
+        continue
 
     # Check if the guessed letter has already been guessed
     if letter_already_guessed(letterGuessed, current_letters_guessed):
@@ -147,6 +175,7 @@ display_selected_word()
 
 # End of the game
 print("Game is over!")
+
 
 
 
