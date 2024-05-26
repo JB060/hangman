@@ -201,7 +201,6 @@ def play_game():
             human_score += 1
         else:
             print(f"Sorry {player_name}, you've not guessed the computer's word.")
-            computer_score += 1
 
         display_selected_word(randomWord)
 
@@ -236,7 +235,6 @@ def play_game():
             computer_score += 1
         else:
             print("The computer did not guess your word.")
-            human_score += 1
 
         display_selected_word(humanWord)
 
@@ -254,7 +252,6 @@ def play_game():
     else:
         print(f"Thank you for playing, {player_name}! Goodbye!")
 
-# Start the game
 play_game()
 
 
