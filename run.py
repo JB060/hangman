@@ -127,6 +127,12 @@ def play_game():
     def display_selected_word(word):
         print("The word was:", word)
 
+    def display_word_length(word):
+        print(f"The word has {len(word)} letters.")
+
+    def is_valid_guess(letter):
+        return len(letter) == 1 and letter.isalpha()
+
     human_score = 0
     computer_score = 0
     rounds = 5
@@ -139,6 +145,8 @@ def play_game():
 
         humanWord = input("Enter a word for the computer to guess: ").strip().lower()
         humanHint = input("Enter a hint for the word: ").strip()
+
+        display_word_length(humanWord)
 
         print(f"\nPart 1: {player_name} guesses the computer's word")
 
@@ -157,6 +165,10 @@ def play_game():
 
             if letterGuessed == 'hint':
                 print(f"Hint: {hint}")
+                continue
+
+            if not is_valid_guess(letterGuessed):
+                print("Invalid input. Please enter a single letter and no numbers.")
                 continue
 
             if len(letterGuessed) > 1:
@@ -232,7 +244,7 @@ def play_game():
     if human_score > computer_score:
         print(f"Congratulations {player_name}, you win!")
     elif human_score < computer_score:
-        print("The computer wins! Better luck next time!")
+        print("The computer wins!")
     else:
         print("It's a tie!")
 
@@ -244,3 +256,5 @@ def play_game():
 
 # Start the game
 play_game()
+
+
