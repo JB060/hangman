@@ -2,23 +2,44 @@ import random
 
 def print_rules():
     print("\nHangman Rules:")
-    print("1. The game is divided into two parts: the human guesses the computer's word, and the computer guesses the human's word.")
-    print("2. For each part, you will try to guess the word one letter at a time or guess the entire word.")
-    print("3. Each correct guess will reveal the letter in the word.")
-    print("4. Each incorrect guess will draw a part of the hangman figure.")
-    print("5. You have a limited number of incorrect guesses (7).")
-    print("6. The game ends when you either guess the word correctly or the hangman is fully drawn.")
-    print("7. You can ask for a hint if you are stuck, but use them wisely!")
-    print("Good luck!\n")
+    print("1. The game is divided into two parts:")
+    print("2. The human guesses the computer's word, ")
+    print("   and the computer guesses the human's word.")
+    print("3. For each part, you will try to guess the word,")
+    print("   one letter at a time.")  
+    print("4. Each correct guess will reveal the letter in the word.")
+    print("5. Each incorrect guess will draw a part of the hangman figure.")
+    print("6. You have a limited number of incorrect guesses (7).")
+    print("7. The game ends when you either guess the word correctly")
+    print("   or the hangman is fully drawn.") 
+    print("8. You can ask for a hint if you are stuck, but use them wisely!")
+
+    print("   Good luck!\n")
+
+def get_player_name():
+    while True:
+        player_name = input("Please enter your name: ").strip()
+        if player_name:
+            return player_name
+        else:
+            print("Name cannot be empty. Please enter your name.")
+
+def get_yes_or_no(prompt):
+    while True:
+        response = input(prompt).strip().lower()
+        if response in ['yes', 'no']:
+            return response
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
 
 def play_game():
     print("Welcome to Hangman")
     print("--------------------------------------------")
 
-    player_name = input("Please enter your name: ").strip()
+    player_name = get_player_name()
 
     # Ask if the user wants to see the rules
-    see_rules = input(f"Hi {player_name}, would you like to see the rules? (yes/no): ").strip().lower()
+    see_rules = get_yes_or_no(f"Hi {player_name}, would you like to see the rules? (yes/no): ")
     if see_rules == 'yes':
         print_rules()
 
@@ -51,54 +72,65 @@ def play_game():
     }
 
     def print_hangman(wrong):
-        if wrong == 0:
-            print("\n+---+")
-            print("    |")
-            print("    |")
-            print("    |")
-            print("   ===")
-        elif wrong == 1:
-            print("\n+---+")
-            print("O   |")
-            print("    |")
-            print("    |")
-            print("   ===")
-        elif wrong == 2:
-            print("\n+---+")
-            print("O   |")
-            print("|   |")
-            print("    |")
-            print("   ===")
-        elif wrong == 3:
-            print("\n+---+")
-            print(" O   |")
-            print("/|   |")
-            print("     |")
-            print("   ===")
-        elif wrong == 4:
-            print("\n+---+")
-            print(" O   |")
-            print("/|\  |")
-            print("     |")
-            print("   ===")
-        elif wrong == 5:
-            print("\n+---+")
-            print(" O   |")
-            print("/|\  |")
-            print(" |   |")
-            print("   ===")
-        elif wrong == 6:
-            print("\n+---+")
-            print(" O   |")
-            print("/|\  |")
-            print("/    |")
-            print("   ===")
-        elif wrong == 7:
-            print("\n+---+")
-            print(" O    |")
-            print("/|\   |")
-            print("/ \   |")
-            print("   ===")
+        stages = [
+            """
+            +---+
+                |
+                |
+                |
+               ===
+            """,
+            """
+            +---+
+            O   |
+                |
+                |
+               ===
+            """,
+            """
+            +---+
+            O   |
+            |   |
+                |
+               ===
+            """,
+            """
+            +---+
+             O   |
+            /|   |
+                 |
+               ===
+            """,
+            """
+            +---+
+             O   |
+            /|\\  |
+                 |
+               ===
+            """,
+            """
+            +---+
+             O   |
+            /|\\  |
+             |   |
+               ===
+            """,
+            """
+            +---+
+             O   |
+            /|\\  |
+            /    |
+               ===
+            """,
+            """
+            +---+
+             O    |
+            /|\\   |
+            / \\   |
+               ===
+            """
+        ]
+        print(stages[wrong])
 
     def printWord(word, guessedLetters):
         rightLetters = 0
@@ -108,13 +140,11 @@ def play_game():
                 rightLetters += 1
             else:
                 print("_", end=" ")
+        print()
         return rightLetters
 
     def printLines(word):
-        print("\n")
-        for char in word:
-            print("\u203E", end=" ")
-        print("\n")
+        print("\n" + "\u203E " * len(word) + "\n")
 
     def letter_already_guessed(letter, guessedLetters):
         return letter in guessedLetters
@@ -160,8 +190,9 @@ def play_game():
             print("\nLetters guessed so far:")
             for letter in human_letters_guessed:
                 print(letter, end=" ")
+            print()
 
-            letterGuessed = input("\nGuess a letter, guess the word, or type 'hint' for a hint: ").strip().lower()
+            letterGuessed = input("Guess a letter, guess the word, or type 'hint' for a hint: ").strip().lower()
 
             if letterGuessed == 'hint':
                 print(f"Hint: {hint}")
@@ -246,12 +277,10 @@ def play_game():
     else:
         print("It's a tie!")
 
-    play_again = input(f"{player_name}, would you like to try again? (yes/no): ").strip().lower()
+    play_again = get_yes_or_no(f"{player_name}, would you like to try again? (yes/no): ")
     if play_again == 'yes':
         play_game()
     else:
         print(f"Thank you for playing, {player_name}! Goodbye!")
 
 play_game()
-
-
