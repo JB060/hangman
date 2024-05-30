@@ -1,20 +1,22 @@
 import random
 
+
 def print_rules():
     print("\nHangman Rules:")
     print("1. The game is divided into two parts:")
     print("2. The human guesses the computer's word, ")
     print("   and the computer guesses the human's word.")
     print("3. For each part, you will try to guess the word,")
-    print("   one letter at a time.")  
+    print("   one letter at a time.")
     print("4. Each correct guess will reveal the letter in the word.")
     print("5. Each incorrect guess will draw a part of the hangman figure.")
     print("6. You have a limited number of incorrect guesses (7).")
     print("7. The game ends when you either guess the word correctly")
-    print("   or the hangman is fully drawn.") 
+    print("   or the hangman is fully drawn.")
     print("8. You can ask for a hint if you are stuck, but use them wisely!")
 
     print("   Good luck!\n")
+
 
 def get_player_name():
     while True:
@@ -24,6 +26,7 @@ def get_player_name():
         else:
             print("Name cannot be empty. Please enter your name.")
 
+
 def get_yes_or_no(prompt):
     while True:
         response = input(prompt).strip().lower()
@@ -31,6 +34,7 @@ def get_yes_or_no(prompt):
             return response
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
+
 
 def play_game():
     print("Welcome to Hangman")
@@ -282,5 +286,6 @@ def play_game():
         play_game()
     else:
         print(f"Thank you for playing, {player_name}! Goodbye!")
+
 
 play_game()
