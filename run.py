@@ -30,7 +30,7 @@ def get_player_name():
 def get_yes_or_no(prompt):
     while True:
         response = input(prompt).strip().lower()
-        if response in ['yes', 'no']:
+        if response in ["yes", "no"]:
             return response
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
@@ -43,8 +43,10 @@ def play_game():
     player_name = get_player_name()
 
     # Ask if the user wants to see the rules
-    see_rules = get_yes_or_no(f"Hi {player_name}, would you like to see the rules? (yes/no): ")
-    if see_rules == 'yes':
+    see_rules = get_yes_or_no(
+        f"Hi {player_name}, would you like to see the rules? (yes/no): "
+    )
+    if see_rules == "yes":
         print_rules()
 
     # Dictionary of words and their hints for the game
@@ -72,7 +74,7 @@ def play_game():
         "tray": "A flat container for carrying items.",
         "trail": "A path or track.",
         "studio": "A place for recording or creating art.",
-        "south": "One of the cardinal directions."
+        "south": "One of the cardinal directions.",
     }
 
     def print_hangman(wrong):
@@ -132,7 +134,7 @@ def play_game():
             /|\\   |
             / \\   |
                ===
-            """
+            """,
         ]
         print(stages[wrong])
 
@@ -154,8 +156,10 @@ def play_game():
         return letter in guessedLetters
 
     def computer_guess(guessedLetters):
-        alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        available_letters = [letter for letter in alphabet if letter not in guessedLetters]
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        available_letters = [
+            letter for letter in alphabet if letter not in guessedLetters
+        ]
         return random.choice(available_letters)
 
     def display_selected_word(word):
@@ -190,15 +194,22 @@ def play_game():
 
         length_of_computer_word = len(randomWord)
 
-        while human_wrong_guesses != 7 and human_correct_letters != length_of_computer_word:
+        while (
+            human_wrong_guesses != 7
+            and human_correct_letters != length_of_computer_word
+        ):
             print("\nLetters guessed so far:")
             for letter in human_letters_guessed:
                 print(letter, end=" ")
             print()
 
-            letterGuessed = input("Guess a letter, guess the word, or type 'hint' for a hint: ").strip().lower()
+            letterGuessed = (
+                input("Guess a letter, guess the word, or type 'hint' for a hint: ")
+                .strip()
+                .lower()
+            )
 
-            if letterGuessed == 'hint':
+            if letterGuessed == "hint":
                 print(f"Hint: {hint}")
                 continue
 
@@ -217,7 +228,9 @@ def play_game():
                     continue
 
             if letter_already_guessed(letterGuessed, human_letters_guessed):
-                print("You have already guessed that letter. Please guess a different letter.")
+                print(
+                    "You have already guessed that letter. Please guess a different letter."
+                )
                 continue
 
             if letterGuessed in randomWord:
@@ -247,22 +260,31 @@ def play_game():
 
         length_of_human_word = len(humanWord)
 
-        while computer_wrong_guesses != 7 and computer_correct_letters != length_of_human_word:
+        while (
+            computer_wrong_guesses != 7
+            and computer_correct_letters != length_of_human_word
+        ):
             letterGuessed = computer_guess(computer_letters_guessed)
             print(f"\nComputer guessed: {letterGuessed}")
 
             if letter_already_guessed(letterGuessed, computer_letters_guessed):
-                print("Computer guessed a letter that was already guessed. It loses its turn.")
+                print(
+                    "Computer guessed a letter that was already guessed. It loses its turn."
+                )
             else:
                 if letterGuessed in humanWord:
                     computer_letters_guessed.append(letterGuessed)
-                    computer_correct_letters = printWord(humanWord, computer_letters_guessed)
+                    computer_correct_letters = printWord(
+                        humanWord, computer_letters_guessed
+                    )
                     printLines(humanWord)
                 else:
                     computer_wrong_guesses += 1
                     computer_letters_guessed.append(letterGuessed)
                     print_hangman(computer_wrong_guesses)
-                    computer_correct_letters = printWord(humanWord, computer_letters_guessed)
+                    computer_correct_letters = printWord(
+                        humanWord, computer_letters_guessed
+                    )
                     printLines(humanWord)
 
         if computer_correct_letters == length_of_human_word:
@@ -281,11 +303,14 @@ def play_game():
     else:
         print("It's a tie!")
 
-    play_again = get_yes_or_no(f"{player_name}, would you like to try again? (yes/no): ")
-    if play_again == 'yes':
+    play_again = get_yes_or_no(
+        f"{player_name}, would you like to try again? (yes/no): "
+    )
+    if play_again == "yes":
         play_game()
     else:
         print(f"Thank you for playing, {player_name}! Goodbye!")
 
 
 play_game()
+
