@@ -197,7 +197,8 @@ def play_game():
             human_wrong_guesses != 7
             and human_correct_letters != length_of_computer_word
         ):
-            print("\nLetters guessed so far:")
+            print(f"\nTries left: {7 - human_wrong_guesses}")
+            print("Letters guessed so far:")
             for letter in human_letters_guessed:
                 print(letter, end=" ")
             print()
@@ -263,6 +264,7 @@ def play_game():
             computer_wrong_guesses != 7
             and computer_correct_letters != length_of_human_word
         ):
+            print(f"\nTries left: {7 - computer_wrong_guesses}")
             letter_guessed = computer_guess(computer_letters_guessed)
             print(f"\nComputer guessed: {letter_guessed}")
 
@@ -312,4 +314,3 @@ def play_game():
 
 
 play_game()
-
