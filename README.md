@@ -27,8 +27,22 @@ This is done by using python to generate the word and check if the user's guesse
     - How was this achieved?
         - When the user gets a guess wrong the number of tries left is printed and each round if they get the answer right or wrong it will print out the traditional hangman image that shows how many tries the user has left in the game.
 
-- I want to give the user a choice of how hard they would like to challenge themselves.
-    - Was this achieved?
-        - Yes
-    - How was this achieved?
-        - To achieve this I created two lists, one with shorter words making them easier to guess and one with longer words making them a bit harder to guess. I then made a function called get_word, within this function I asked the user what level they would like to play at. If they chose easy it would generate a word from the easier list if they chose hard it would generate a word from the harder list. 
+- I want to give the user and the computer a choice of words to choose for each other to guess.
+   - Was this achieved?
+      - Yes both the computer and the player can pick a random word and a hint to match the word in case the user feels the word is too hard for them to guess.
+
+### Changes throughout the process   
+
+Throughout the process of making this project, I decided to change a couple of things due to the time limit I had to make the game.
+- originally I was going to go with the old-school way of both player and computer guessing the same word.
+- I then went with player choices for the computer and vice versa, this also was the same with the "hints" in the game.
+
+## Features 
+
+### Welcome page
+- This is the first page you see when the app loads. On this page there is a welcome message and a question to the user. The question asks the user if
+- they want to see the instructions or if they are happy to go ahead and play without seeing them.
+  <img src= ""alt= "">
+
+  
+
