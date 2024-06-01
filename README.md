@@ -42,7 +42,8 @@ Throughout the process of making this project, I decided to change a couple of t
 ### Welcome page
 - This is the first page you see when the app loads. On this page there is a welcome message and a question to the user. The question asks the user if
 - they want to see the instructions or if they are happy to go ahead and play without seeing them.
-  <img src= ""alt= "">
+- 
+  <img src="images/nameinputandinstructionsask.png"alt= "input of name into the game before the game moves on">
 
   
 
