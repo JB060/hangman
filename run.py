@@ -14,7 +14,6 @@ def print_rules():
     print("7. The game ends when you either guess the word correctly")
     print("   or the hangman is fully drawn.")
     print("8. You can ask for a hint if you are stuck, but use them wisely!")
-
     print("   Good luck!\n")
 
 
@@ -50,7 +49,7 @@ def play_game():
         print_rules()
 
     # Dictionary of words and their hints for the game
-    wordDictionary = {
+    word_dictionary = {
         "graze": "What cows do in a field.",
         "tooth": "Found in your mouth, used for chewing.",
         "paper": "You write on it.",
@@ -138,27 +137,27 @@ def play_game():
         ]
         print(stages[wrong])
 
-    def printWord(word, guessedLetters):
-        rightLetters = 0
+    def print_word(word, guessed_letters):
+        right_letters = 0
         for char in word:
-            if char in guessedLetters:
+            if char in guessed_letters:
                 print(char, end=" ")
-                rightLetters += 1
+                right_letters += 1
             else:
                 print("_", end=" ")
         print()
-        return rightLetters
+        return right_letters
 
-    def printLines(word):
+    def print_lines(word):
         print("\n" + "\u203E " * len(word) + "\n")
 
-    def letter_already_guessed(letter, guessedLetters):
-        return letter in guessedLetters
+    def letter_already_guessed(letter, guessed_letters):
+        return letter in guessed_letters
 
-    def computer_guess(guessedLetters):
+    def computer_guess(guessed_letters):
         alphabet = "abcdefghijklmnopqrstuvwxyz"
         available_letters = [
-            letter for letter in alphabet if letter not in guessedLetters
+            letter for letter in alphabet if letter not in guessed_letters
         ]
         return random.choice(available_letters)
 
@@ -179,12 +178,12 @@ def play_game():
         print(f"\nRound {round_number} of {rounds}")
         print(f"Score - {player_name}: {human_score}, Computer: {computer_score}")
 
-        randomWord, hint = random.choice(list(wordDictionary.items()))
+        random_word, hint = random.choice(list(word_dictionary.items()))
 
-        humanWord = input("Enter a word for the computer to guess: ").strip().lower()
-        humanHint = input("Enter a hint for the word: ").strip()
+        human_word = input("Enter a word for the computer to guess: ").strip().lower()
+        human_hint = input("Enter a hint for the word: ").strip()
 
-        display_word_length(humanWord)
+        display_word_length(human_word)
 
         print(f"\nPart 1: {player_name} guesses the computer's word")
 
@@ -192,7 +191,7 @@ def play_game():
         human_letters_guessed = []
         human_correct_letters = 0
 
-        length_of_computer_word = len(randomWord)
+        length_of_computer_word = len(random_word)
 
         while (
             human_wrong_guesses != 7
@@ -203,22 +202,22 @@ def play_game():
                 print(letter, end=" ")
             print()
 
-            letterGuessed = (
+            letter_guessed = (
                 input("Guess a letter, guess the word, or type 'hint' for a hint: ")
                 .strip()
                 .lower()
             )
 
-            if letterGuessed == "hint":
+            if letter_guessed == "hint":
                 print(f"Hint: {hint}")
                 continue
 
-            if not is_valid_guess(letterGuessed):
+            if not is_valid_guess(letter_guessed):
                 print("Invalid input. Please enter a single letter and no numbers.")
                 continue
 
-            if len(letterGuessed) > 1:
-                if letterGuessed == randomWord:
+            if len(letter_guessed) > 1:
+                if letter_guessed == random_word:
                     human_correct_letters = length_of_computer_word
                     break
                 else:
@@ -227,22 +226,22 @@ def play_game():
                     print_hangman(human_wrong_guesses)
                     continue
 
-            if letter_already_guessed(letterGuessed, human_letters_guessed):
+            if letter_already_guessed(letter_guessed, human_letters_guessed):
                 print(
                     "You have already guessed that letter. Please guess a different letter."
                 )
                 continue
 
-            if letterGuessed in randomWord:
-                human_letters_guessed.append(letterGuessed)
-                human_correct_letters = printWord(randomWord, human_letters_guessed)
-                printLines(randomWord)
+            if letter_guessed in random_word:
+                human_letters_guessed.append(letter_guessed)
+                human_correct_letters = print_word(random_word, human_letters_guessed)
+                print_lines(random_word)
             else:
                 human_wrong_guesses += 1
-                human_letters_guessed.append(letterGuessed)
+                human_letters_guessed.append(letter_guessed)
                 print_hangman(human_wrong_guesses)
-                human_correct_letters = printWord(randomWord, human_letters_guessed)
-                printLines(randomWord)
+                human_correct_letters = print_word(random_word, human_letters_guessed)
+                print_lines(random_word)
 
         if human_correct_letters == length_of_computer_word:
             print(f"Congratulations {player_name}! You've guessed the computer's word!")
@@ -250,7 +249,7 @@ def play_game():
         else:
             print(f"Sorry {player_name}, you've not guessed the computer's word.")
 
-        display_selected_word(randomWord)
+        display_selected_word(random_word)
 
         print("\nPart 2: Computer guesses the human's word")
 
@@ -258,34 +257,34 @@ def play_game():
         computer_letters_guessed = []
         computer_correct_letters = 0
 
-        length_of_human_word = len(humanWord)
+        length_of_human_word = len(human_word)
 
         while (
             computer_wrong_guesses != 7
             and computer_correct_letters != length_of_human_word
         ):
-            letterGuessed = computer_guess(computer_letters_guessed)
-            print(f"\nComputer guessed: {letterGuessed}")
+            letter_guessed = computer_guess(computer_letters_guessed)
+            print(f"\nComputer guessed: {letter_guessed}")
 
-            if letter_already_guessed(letterGuessed, computer_letters_guessed):
+            if letter_already_guessed(letter_guessed, computer_letters_guessed):
                 print(
                     "Computer guessed a letter that was already guessed. It loses its turn."
                 )
             else:
-                if letterGuessed in humanWord:
-                    computer_letters_guessed.append(letterGuessed)
-                    computer_correct_letters = printWord(
-                        humanWord, computer_letters_guessed
+                if letter_guessed in human_word:
+                    computer_letters_guessed.append(letter_guessed)
+                    computer_correct_letters = print_word(
+                        human_word, computer_letters_guessed
                     )
-                    printLines(humanWord)
+                    print_lines(human_word)
                 else:
                     computer_wrong_guesses += 1
-                    computer_letters_guessed.append(letterGuessed)
+                    computer_letters_guessed.append(letter_guessed)
                     print_hangman(computer_wrong_guesses)
-                    computer_correct_letters = printWord(
-                        humanWord, computer_letters_guessed
+                    computer_correct_letters = print_word(
+                        human_word, computer_letters_guessed
                     )
-                    printLines(humanWord)
+                    print_lines(human_word)
 
         if computer_correct_letters == length_of_human_word:
             print("The computer has guessed your word!")
@@ -293,7 +292,7 @@ def play_game():
         else:
             print("The computer did not guess your word.")
 
-        display_selected_word(humanWord)
+        display_selected_word(human_word)
 
     print(f"\nFinal Score - {player_name}: {human_score}, Computer: {computer_score}")
     if human_score > computer_score:
