@@ -6,6 +6,5 @@ This is done by using python to generate the word and check if the user's guesse
 
 
 
-## Table of contents 
-
+[Click here to go to the live website!](https://hangman-jb060-d0d13762f512.herokuapp.com/)
 
