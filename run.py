@@ -170,6 +170,48 @@ def play_game():
     def is_valid_guess(letter):
         return len(letter) == 1 and letter.isalpha()
 
+    def play_computer_guess(human_word):
+        computer_wrong_guesses = 0
+        computer_letters_guessed = []
+        computer_correct_letters = 0
+
+        length_of_human_word = len(human_word)
+
+        while (
+            computer_wrong_guesses != 7
+            and computer_correct_letters != length_of_human_word
+        ):
+            print(f"\nTries left: {7 - computer_wrong_guesses}")
+            letter_guessed = computer_guess(computer_letters_guessed)
+            print(f"\nComputer guessed: {letter_guessed}")
+
+            if letter_already_guessed(letter_guessed, computer_letters_guessed):
+                print(
+                    "Computer guessed a letter that was already guessed. It loses its turn."
+                )
+            else:
+                if letter_guessed in human_word:
+                    computer_letters_guessed.append(letter_guessed)
+                    computer_correct_letters = print_word(
+                        human_word, computer_letters_guessed
+                    )
+                    print_lines(human_word)
+                else:
+                    computer_wrong_guesses += 1
+                    computer_letters_guessed.append(letter_guessed)
+                    print_hangman(computer_wrong_guesses)
+                    computer_correct_letters = print_word(
+                        human_word, computer_letters_guessed
+                    )
+                    print_lines(human_word)
+
+        if computer_correct_letters == length_of_human_word:
+            print("The computer has guessed your word!")
+            return True
+        else:
+            print("The computer did not guess your word.")
+            return False
+
     human_score = 0
     computer_score = 0
     rounds = 5
@@ -252,47 +294,12 @@ def play_game():
 
         display_selected_word(random_word)
 
-        print("\nPart 2: Computer guesses the human's word")
-
-        computer_wrong_guesses = 0
-        computer_letters_guessed = []
-        computer_correct_letters = 0
-
-        length_of_human_word = len(human_word)
-
-        while (
-            computer_wrong_guesses != 7
-            and computer_correct_letters != length_of_human_word
-        ):
-            print(f"\nTries left: {7 - computer_wrong_guesses}")
-            letter_guessed = computer_guess(computer_letters_guessed)
-            print(f"\nComputer guessed: {letter_guessed}")
-
-            if letter_already_guessed(letter_guessed, computer_letters_guessed):
-                print(
-                    "Computer guessed a letter that was already guessed. It loses its turn."
-                )
-            else:
-                if letter_guessed in human_word:
-                    computer_letters_guessed.append(letter_guessed)
-                    computer_correct_letters = print_word(
-                        human_word, computer_letters_guessed
-                    )
-                    print_lines(human_word)
-                else:
-                    computer_wrong_guesses += 1
-                    computer_letters_guessed.append(letter_guessed)
-                    print_hangman(computer_wrong_guesses)
-                    computer_correct_letters = print_word(
-                        human_word, computer_letters_guessed
-                    )
-                    print_lines(human_word)
-
-        if computer_correct_letters == length_of_human_word:
-            print("The computer has guessed your word!")
-            computer_score += 1
-        else:
-            print("The computer did not guess your word.")
+        # Ask if the player wants the computer to guess their word
+        play_computer = get_yes_or_no("Would you like the computer to guess your word? (yes/no): ")
+        if play_computer == "yes":
+            print("\nPart 2: Computer guesses the human's word")
+            if play_computer_guess(human_word):
+                computer_score += 1
 
         display_selected_word(human_word)
 
@@ -314,3 +321,5 @@ def play_game():
 
 
 play_game()
+
+
