@@ -19,7 +19,8 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
     - Was this achieved?
         - Yes
     - How was this achieved?
-        - If a play either loses or wins the game it will ask them if they would like to play again "YES" or "NO". If the user decides they don't want to play anymore it will show a message saying GoodBye but also state that if they would like to carry on playing all they need to do is either refresh the page or click on the run program button above.
+        - The game was given a first to 5 and If a player either loses or wins the game, it will ask them if they would like to play again "YES" or "NO".
+        - If the user decides they don't want to play anymore it will show a message saying GoodBye but also state that if they would like to carry on playing all they need to do is either refresh the page or click on the run program button above.
 
 - To make it clear to the user how many tries they have left until the game is over.
     - Was this achieved?
@@ -35,7 +36,7 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
 
 Throughout the process of making this project, I decided to change a couple of things due to the time limit I had to make the game.
 - originally I was going to go with the old-school way of both player and computer guessing the same word.
-- I then went with player choices for the computer and vice versa, this also was the same with the "hints" in the game.
+- I then went with player choice for the computer and vice versa, this also was the same with the "hints" in the game.
 
 ## Features 
 
