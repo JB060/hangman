@@ -5,7 +5,7 @@ For this project I wanted to create a version of this game that you can play aga
 This is done by using python to generate the word and check if the user's guesses are correct, incorrect, invalid or if the user has already guessed the letter.
 
 <img src ="images/responsive screenshot.png" alt="image of app on different sized screens">
-[Click here to go to the live website!](https://hangman-jb060-d0d13762f512.herokuapp.com/)
+Click here to go to the live website!(https://hangman-jb060-d0d13762f512.herokuapp.com/)
 
 ### Objectives
 
