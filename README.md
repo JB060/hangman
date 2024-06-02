@@ -45,38 +45,23 @@ Throughout the process of making this project, I decided to change a couple of t
   welcome message and a question to the user. 
   The question asks the user if
   they want to see the instructions or if they are happy to go ahead and play without seeing them.
-  
-  - <img src="/workspace//hangman/images/1.png" alt= "">
 
-  - <img src="/workspace/hangman/images/2.png" alt= "">
-
-  - <img src="/workspace/hangman/images/3.png" alt= "">
-
-  - <img src="/workspace/hangman/images/4.png" alt= "">
-
-  - <img src="/workspace/hangman/images/5.png" alt= "">
-
-  - <img src="/workspace/hangman/images/6.png" alt= "">
-
-  - <img src="/workspace/hangman/images/7.png" alt= "">
-
-  - <img src="/workspace/hangman/images/8.png" alt= "">
-
-  - <img src="/workspace/hangman/images/9.png" alt= "">
-
-  - <img src="/workspace/hangman/images/10.png" alt= "">
-
-  - <img src="/workspace/hangman/images/11.png" alt= "">
-
-  - <img src="/workspace/hangman/images/12.png" alt= "">
-
-  - <img src="/workspace/hangman/images/13.png" alt= "">
-
-  - <img src="/workspace/hangman/images/14.png" alt= "">
-
-  - <img src="/workspace/hangman/images/15.png" alt= "">
-
-  - <img src="/workspace/hangman/images/16.png" alt= "">
+<img src="/workspace//hangman/images/1.png" alt= "">
+<img src="/workspace/hangman/images/2.png" alt= "">
+<img src="/workspace/hangman/images/3.png" alt= "">
+<img src="/workspace/hangman/images/4.png" alt= "">
+<img src="/workspace/hangman/images/5.png" alt= "">
+<img src="/workspace/hangman/images/6.png" alt= "">
+<img src="/workspace/hangman/images/7.png" alt= "">
+<img src="/workspace/hangman/images/8.png" alt= "">
+<img src="/workspace/hangman/images/9.png" alt= "">
+<img src="/workspace/hangman/images/10.png" alt= "">
+<img src="/workspace/hangman/images/11.png" alt= "">
+<img src="/workspace/hangman/images/12.png" alt= "">
+<img src="/workspace/hangman/images/13.png" alt= "">
+<img src="/workspace/hangman/images/14.png" alt= "">
+<img src="/workspace/hangman/images/15.png" alt= "">
+<img src="/workspace/hangman/images/16.png" alt= "">
 
 
 
