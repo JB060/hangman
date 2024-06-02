@@ -46,7 +46,7 @@ Throughout the process of making this project, I decided to change a couple of t
   The question asks the user if
   they want to see the instructions or if they are happy to go ahead and play without seeing them.
 
-<img src="/workspace//hangman/images/1.png" alt= "">
+<img src="/workspace/hangman/images/1.png" alt= "">
 <img src="/workspace/hangman/images/2.png" alt= "">
 <img src="/workspace/hangman/images/3.png" alt= "">
 <img src="/workspace/hangman/images/4.png" alt= "">
