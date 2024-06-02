@@ -13,13 +13,13 @@ This is done by using python to generate the word and check if the user's guesse
     - Was this achieved?
         - Yes
     - How was this achieved?
-        - This was achieved by using a simple 1 for yes or 2 for no for each time the user needs to make a choice other than when they are choosing a letter as their guess.  
+        - This was achieved by using a simple  yes or no each time the user needs to make a choice other than when they are choosing a letter as their guess.  
                         
  - I want the game to run in a smooth loop to allow the user to keep playing as many times as they'd like to. 
     - Was this achieved?
         - Yes
     - How was this achieved?
-        - If a play either loses or wins the game it will ask them if they would like to play again 1 for yes and 2 for no. If the user decides they don't want to play anymore it will show a message saying GoodBye but also state that if they would like to carry on playing all they need to do is either refresh the page or click on the run program button above.
+        - If a play either loses or wins the game it will ask them if they would like to play again "YES" or "NO". If the user decides they don't want to play anymore it will show a message saying GoodBye but also state that if they would like to carry on playing all they need to do is either refresh the page or click on the run program button above.
 
 - To make it clear to the user how many tries they have left until the game is over.
     - Was this achieved?
@@ -40,12 +40,11 @@ Throughout the process of making this project, I decided to change a couple of t
 ## Features 
 
 ### Welcome page
-- This is the first page you see when the app loads. On this page there is a welcome message and a question to the user. The question asks the user if
-- they want to see the instructions or if they are happy to go ahead and play without seeing them.
-- 
+- This is the first page you see when the app loads. On this page, there is a welcome message and a question to the user. The question asks the user if
+  they want to see the instructions or if they are happy to go ahead and play without seeing them.
+  
   <img src="images/nameinputandinstructionsask.png" alt= "input of name into the game before the game moves on">
 
-  [
-](https://github.com/JB060/hangman/commit/ababde235523416e6e920955d83122ba7760711e#diff-3f6ab448205b86eea04f74086235ee0bf7a429cac067cd4ffd9c0299c1909e77)
+  
   
 
