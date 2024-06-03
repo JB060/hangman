@@ -187,7 +187,8 @@ There were many steps to deploying this project to Heroku:
 3. I chose a name for my app; every app must have a unique name so I couldn't call it Hangman as this was already taken so I went for hang-the-guy.
 4. Select my region and click Create an app. 
 5. I then went to the tab at the top of the page and clicked on settings. 
-6. Some apps will include sensitive data in the gitpod workspace that isn't in the GitHub repository because it has been deliberately protected in the gitnore. file. I didn't have any sensitive data to protect but if I had done, I would have needed to create a config var to allow Heroku access to this data. 
+6. Some apps will include sensitive data in the gitpod workspace that isn't in the GitHub repository because it has been deliberately protected in the gitnore. file.
+   I didn't have any sensitive data to protect but if I had done, I would have needed to create a config var to allow Heroku access to this data. 
  - To do this, I would have clicked reveal config vars.
  - Filled in the key for example: CREDS
  - Then copy and paste the contents of that 'CREDS' file into the value field and click add. 
