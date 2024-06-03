@@ -76,7 +76,7 @@ Throughout the process of making this project, I decided to change a couple of t
   "letters guessed" area of the terminal and we get to keep all our tries.
 <img src="/images/7.png" alt= "">
 
-### area for guessed letters 
+### Area for guessed letters 
 <img src="/images/14.png" alt= "">
 
 ### 2nd selection (incorrect)
