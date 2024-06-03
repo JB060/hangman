@@ -92,12 +92,17 @@ Throughout the process of making this project, I decided to change a couple of t
 - In the image below we can see the computer has correctly guessed the last
   letter of the word "K" and this is printed to the terminal but as the computer proceeds on with its tries
   we can see that it has incorrectly guessed the rest of its tries.
-
-  
 <img src="/images/10.png" alt= "">
-<img src="/images/11.png" alt= "">
-<img src="/images/12.png" alt= "">
+
+### Game End 
+- As this is a best-to-5 game I've here is what the final screen looks like when either the player or computer wins.
+  it states the final score,
+  it states a congratulatory message and asks if you would like to try again.
+  if the player enters "yes" then the process repeats itself, but if the player inputs no the player gets a message stating:
+  "Thank you for playing, 'JASON!' Goodbye!" 
 <img src="/images/13.png" alt= "">
+
+
 <img src="/images/14.png" alt= "">
 <img src="/images/15.png" alt= "">
 <img src="/images/16.png" alt= "">
