@@ -41,10 +41,8 @@ Throughout the process of making this project, I decided to change a couple of t
 ## Features 
 
 ### Welcome page
-- This is the first page you see when the app loads. On this page, there is a 
-  welcome message and a question for the user. 
-  The question asks the user if
-  they want to see the instructions or are happy to go ahead and play without seeing them.
+- This is the first page you see when the app loads. On this page, the player is asked to input their name.
+  The player must enter a name for the game to proceed.
 <img src="/images/1.png" alt= "">
 
 ### Rules
