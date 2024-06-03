@@ -48,9 +48,10 @@ Throughout the process of making this project, I decided to change a couple of t
 <img src="/images/1.png" alt= "">
 
 ### Rules
-- Here the palyer is asked wheter or not they would like to see the rules of the game a simple "Yes" or No" is typed
-  to bring the player to the next stage
-<img src="/images/2.png" alt= "">
+- Here the player is asked whether or not they would like to see the rules of the game a simple "Yes" or No" is typed.
+  - if the player types "yes" The rules of the game will be printed in the terminal.
+  - if the player types "No" the game will proceed to the next stage without seeing the rules. 
+  <img src="/images/2.png" alt= "">
 
 ###
 <img src="/images/3.png" alt= "">
