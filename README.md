@@ -75,7 +75,8 @@ Throughout the process of making this project, I decided to change a couple of t
   on this selection, the player has chosen correctly the letter "T" and the letter has been printed in the word selected, and to the
   "letters guessed" area of the terminal and we get to keep all our tries.
 <img src="/images/7.png" alt= "">
-#### area for guessed letters 
+
+### area for guessed letters 
 <img src="/images/14.png" alt= "">
 
 ### 2nd selection (incorrect)
