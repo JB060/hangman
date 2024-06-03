@@ -199,6 +199,14 @@ There were many steps to deploying this project to Heroku:
  - This Hangman game offers an engaging way to challenge yourself and the computer in a classic word-guessing game. 
    Enjoy playing and improving your vocabulary!
 
+## Credits 
+- [Lucid chart](https://www.lucidchart.com/pages/) - This was used to create the flow chart in the planning process for this project. 
+- [code beautifier](https://codebeautify.org/python-formatter-beautifier) - made the code look beautiful (as described LOL).
+- [PEP8 validator](http://pep8online.com/) - was used to check the code was valid.
+- Youtube - I watched many different YouTube videos on how to make a hangman using Python and learnt a lot from many people.
+- Marcel - My mentor Marcel was extremely helpful as always helping me feel confident in what I have made.
+
+
 
 
 
