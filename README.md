@@ -148,6 +148,14 @@ The main functions and their purposes are as follows:
  - is_valid_guess(letter): Validates the player's letter guesses.
  - play_computer_guess(human_word): Manages the computer's guessing process.
 
+
+## Testing
+
+### Python
+Python was tested using PEP8 [PEP8 validator](http://pep8online.com/) 
+
+The Python results came back with the following:
+
 ## Deployment 
 There were many steps to deploying this project to Heroku:
 
