@@ -6,8 +6,28 @@ The game is designed for interactive play and features a simple text-based inter
 <img src ="images/responsive screenshot.png" alt="image of app on different sized screens">
 Click here to go to the live website!: https://hangman-jb060-d0d13762f512.herokuapp.com/
 
-## Plans and structure 
-- ADD A FLOW CHART
+## Table of contents
+- Plans and structure
+- How to Play
+- Rules
+- Features
+- Objectives
+- Changes throughout the process
+- Features
+   - Welcome page
+   - Rules
+   - The player picks a word for the computer to guess
+   - Hint (Computer)
+   - 1st selection (Correct)
+   - Part 1, Player's Turn
+     - Hint (Player)
+     - 1st selection (Correct)
+     - Area for guessed letters
+     - 2nd selection (incorrect)
+     - Player Guesse's Word correctly
+  - Part 2, Computers Turn
+  - Game End       
+
 
 ### How to Play
 1. Starting the Game: Run the script to start the game. You will be prompted to enter your name.
@@ -24,13 +44,6 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
 5. You have a maximum of 7 incorrect guesses per word.
 6. You can ask for a hint if you are stuck.
 7. The game ends when either the word is guessed correctly or the hangman is fully drawn.
-
-### Features
- - Interactive gameplay with clear prompts and responses.
- - Random word selection from a predefined dictionary.
- - The ability for the computer to guess user-provided words.
- - Hint functionality to assist in guessing.
- - ASCII art to display the hangman figure progressively.
 
 
 ### Objectives
@@ -58,14 +71,20 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
    - Was this achieved?
       - Yes both the computer and the player can pick a random word and a hint to match the word in case the user feels the word is too hard for them to guess.
 
-### Changes throughout the process   
+### Changes throughout the process 
 
 Throughout the process of making this project, I decided to change a couple of things due to the time limit I had to make the game.
 - originally I was going to go with the old-school way of both player and computer guessing the same word.
 - I then went with player choice for the computer and vice versa, this also was the same with the "hints" in the game.
 
-## Features 
+## Features
+ - Interactive gameplay with clear prompts and responses.
+ - Random word selection from a predefined dictionary.
+ - The ability for the computer to guess user-provided words.
+ - Hint functionality to assist in guessing.
+ - ASCII art to display the hangman figure progressively.
 
+   
 ### Welcome page
 - This is the first page you see when the app loads. On this page, it gives you a welcome message "Welcome to hangman" and asks the player to input their name.
   The player must enter a name for the game to proceed.
