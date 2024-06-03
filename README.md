@@ -1,11 +1,34 @@
 # Hangman
 
-Hangman is a game usually played by two or more people, where one person thinks of a word while the others guess what the word is by guessing one letter at a time until the whole word is revealed.
-For this project, I wanted to create a version of this game that you can play against the computer rather than playing against another person.
-This is done by using Python to generate the word and check if the user's guesses are correct, incorrect, invalid or if the user has already guessed the letter.
+Welcome to the Hangman Game! This project implements a classic Hangman game where both the human and the computer take turns guessing each other's words. 
+The game is designed for interactive play and features a simple text-based interface.
 
 <img src ="images/responsive screenshot.png" alt="image of app on different sized screens">
 Click here to go to the live website!: https://hangman-jb060-d0d13762f512.herokuapp.com/
+
+### How to Play
+1.Starting the Game: Run the script to start the game. You will be prompted to enter your name.
+2.Viewing the Rules: You can choose to view the game rules at the start.
+3.Game Rounds: The game consists of 5 rounds, and in each round, you will:
+-Guess the Computer's Word: The computer selects a random word from its dictionary, and you attempt to guess it letter by letter.
+-Computer Guesses Your Word: You provide a word for the computer to guess. The computer will attempt to guess your word letter by letter.
+
+### Rules
+1. You will guess the computer's word one letter at a time.
+2. The computer will guess your word one letter at a time.
+3. Each correct guess reveals the letter in the word.
+4. Each incorrect guess draws a part of the hangman figure.
+5. You have a maximum of 7 incorrect guesses per word.
+6. You can ask for a hint if you are stuck.
+7. The game ends when either the word is guessed correctly or the hangman is fully drawn.
+
+### Features
+-Interactive gameplay with clear prompts and responses.
+-Random word selection from a predefined dictionary.
+-The ability for the computer to guess user-provided words.
+-Hint functionality to assist in guessing.
+-ASCII art to display the hangman figure progressively.
+
 
 ### Objectives
 
@@ -106,6 +129,47 @@ Throughout the process of making this project, I decided to change a couple of t
 <img src="/images/13.png" alt= "">
 
 
+### Code Structure
+The main functions and their purposes are as follows:
+
+-print_rules(): Displays the game rules.
+-get_player_name(): Prompts the player to enter their name.
+-get_yes_or_no(prompt): Prompts the player for a 'yes' or 'no' response.
+-print_hangman(wrong): Displays the hangman figure based on the number of wrong guesses.
+-print_word(word, guessed_letters): Displays the word with guessed letters revealed.
+-print_lines(word): Prints a line of underscores for each letter in the word.
+-letter_already_guessed(letter, guessed_letters): Checks if a letter has already been guessed.
+-computer_guess(guessed_letters): Generates a guess for the computer.
+-display_selected_word(word): Displays the word after the game round.
+-display_word_length(word): Displays the length of the word to be guessed.
+-is_valid_guess(letter): Validates the player's letter guesses.
+-play_computer_guess(human_word): Manages the computer's guessing process.
+
+
+### Manual Testing
+-Initial Setup: Verify that the game starts correctly and prompts the user for their name.
+-Rules Display: Check that the rules are displayed if the user opts to see them.
+-Word Guessing: Ensure the player can guess letters and receive feedback on correct or incorrect guesses.
+-Computer Guessing: Test the computer's ability to guess the user's word and handle repeated letters and invalid inputs.
+-Scoring: Confirm that scores are tracked correctly and displayed at the end of each round.
+-Hints: Validate that hints are provided correctly when requested.
+-Game Flow: Check the overall flow of the game, including transitions between rounds and the end-game scenario.
+
+### Bugs Squashed
+-Fixed a bug where the computer guessed previously guessed letters.
+-Resolved issues with invalid input handling, ensuring only single alphabetic characters are accepted.
+-Corrected scoring logic to accurately reflect the results of each round.
+-Improved hint functionality to provide relevant hints without revealing too much information.
+
+
+### Future Improvements
+-Enhance the computer's guessing algorithm to be more intelligent.
+-Add more words and hints to the dictionary for greater variety.
+-Implement a graphical user interface (GUI) for a more user-friendly experience.
+
+### Conclusion
+-This Hangman game offers an engaging way to challenge yourself and the computer in a classic word-guessing game. 
+ Enjoy playing and improving your vocabulary!
 
 
 
