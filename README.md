@@ -7,9 +7,9 @@ The game is designed for interactive play and features a simple text-based inter
 Click here to go to the live website!: https://hangman-jb060-d0d13762f512.herokuapp.com/
 
 ## Table of contents
-### Plans and structure
 <img src= "images/hangmanflowchart.png" alt ="flow chart of structure">
 
+### Plans and structure
 - How to Play
 - Rules
 - Features
