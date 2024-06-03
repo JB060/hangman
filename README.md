@@ -41,7 +41,7 @@ Throughout the process of making this project, I decided to change a couple of t
 ## Features 
 
 ### Welcome page
-- This is the first page you see when the app loads. On this page, the player is asked to input their name.
+- This is the first page you see when the app loads. On this page, it gives you a welcome message "Welcome to hangman" and asks the player to input their name.
   The player must enter a name for the game to proceed.
 <img src="/images/1.png" alt= "">
 
