@@ -1,8 +1,8 @@
 # Hangman
 
 Hangman is a game usually played by two or more people, where one person thinks of a word while the others guess what the word is by guessing one letter at a time until the whole word is revealed.
-For this project I wanted to create a version of this game that you can play against the computer rather than playing against another person.
-This is done by using python to generate the word and check if the user's guesses are correct, incorrect, invalid or if the user has already guessed the letter.
+For this project, I wanted to create a version of this game that you can play against the computer rather than playing against another person.
+This is done by using Python to generate the word and check if the user's guesses are correct, incorrect, invalid or if the user has already guessed the letter.
 
 <img src ="images/responsive screenshot.png" alt="image of app on different sized screens">
 Click here to go to the live website!: https://hangman-jb060-d0d13762f512.herokuapp.com/
@@ -19,7 +19,7 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
     - Was this achieved?
         - Yes
     - How was this achieved?
-        - The game was given a first to 5 and If a player either loses or wins the game, it will ask them if they would like to play again "YES" or "NO".
+        - The game was written as first to 5 and If a player either loses or wins the game, it will ask them if they would like to play again "YES" or "NO".
         - If the user decides they don't want to play anymore it will show a message saying GoodBye but also state that if they would like to carry on playing all they need to do is either refresh the page or click on the run program button above.
 
 - To make it clear to the user how many tries they have left until the game is over.
@@ -42,9 +42,9 @@ Throughout the process of making this project, I decided to change a couple of t
 
 ### Welcome page
 - This is the first page you see when the app loads. On this page, there is a 
-  welcome message and a question to the user. 
+  welcome message and a question for the user. 
   The question asks the user if
-  they want to see the instructions or if they are happy to go ahead and play without seeing them.
+  they want to see the instructions or are happy to go ahead and play without seeing them.
 <img src="/images/1.png" alt= "">
 
 ### Rules
@@ -53,7 +53,7 @@ Throughout the process of making this project, I decided to change a couple of t
   - if the player types "No" the game will proceed to the next stage without seeing the rules. 
   <img src="/images/2.png" alt= "">
 
-### Player picks a word for the computer to guess.
+### The player picks a word for the computer to guess.
 - On this screen, the player has typed "yes" to observe the game rules and the next step is for the player to pick any word from
   the English dictionary for the computer to guess, after picking the word, it will show in the terminal how many letters the word contains. 
 <img src="/images/3.png" alt= "">
@@ -69,9 +69,19 @@ Throughout the process of making this project, I decided to change a couple of t
 <img src="/images/5.png" alt= "">
 
 ### Hint (Player)
-- the player has chosen to use his "hint" and the hint has been printed in the terminal as:(Found in your mouth for chewing.
+- The player has chosen to use his "hint" and the hint has been printed in the terminal as:(Found in your mouth for chewing).
 <img src="/images/6.png" alt= "">
+
+### 1st selection (Correct)
+- As we can see on the screen we start off with "7" tries to guess the word the computer has chosen for us.
+  on this selection, the player has chosen correctly with the letter "T" and the letter has been printed in the word selected, and to the
+  "letters guessed" area of the terminal and we get to keep all our tries.
 <img src="/images/7.png" alt= "">
+
+### 2nd selection (incorrect)
+- The player has made an incorrect selection of the letter "A" and the 1st part of the hangman has been drawn to the terminal to show
+  us that this is the situation, also the letter "A" has been printed to the "letters guessed" area of the terminal showing us that we have
+  already guessed these letters as to insure we don't guess again.
 <img src="/images/8.png" alt= "">
 <img src="/images/9.png" alt= "">
 <img src="/images/10.png" alt= "">
