@@ -6,10 +6,13 @@ The game is designed for interactive play and features a simple text-based inter
 <img src ="images/responsive screenshot.png" alt="image of app on different sized screens">
 Click here to go to the live website!: https://hangman-jb060-d0d13762f512.herokuapp.com/
 
+## Plans and structure 
+- ADD A FLOW CHART
+
 ### How to Play
-1.Starting the Game: Run the script to start the game. You will be prompted to enter your name.
-2.Viewing the Rules: You can choose to view the game rules at the start.
-3.Game Rounds: The game consists of 5 rounds, and in each round, you will:
+1. Starting the Game: Run the script to start the game. You will be prompted to enter your name.
+2. Viewing the Rules: You can choose to view the game rules at the start.
+3. Game Rounds: The game consists of 5 rounds, and in each round, you will:
 -Guess the Computer's Word: The computer selects a random word from its dictionary, and you attempt to guess it letter by letter.
 -Computer Guesses Your Word: You provide a word for the computer to guess. The computer will attempt to guess your word letter by letter.
 
