@@ -45,9 +45,14 @@ Throughout the process of making this project, I decided to change a couple of t
   welcome message and a question to the user. 
   The question asks the user if
   they want to see the instructions or if they are happy to go ahead and play without seeing them.
-
 <img src="/images/1.png" alt= "">
+
+### Rules
+- Here the palyer is asked wheter or not they would like to see the rules of the game a simple "Yes" or No" is typed
+  to bring the player to the next stage
 <img src="/images/2.png" alt= "">
+
+###
 <img src="/images/3.png" alt= "">
 <img src="/images/4.png" alt= "">
 <img src="/images/5.png" alt= "">
