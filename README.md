@@ -171,6 +171,16 @@ The main functions and their purposes are as follows:
 
 
 ## Testing
+
+### Manual Testing
+ - Initial Setup: Verify that the game starts correctly and prompts the user for their name.
+ - Rules Display: Check that the rules are displayed if the user opts to see them.
+ - Word Guessing: Ensure the player can guess letters and receive feedback on correct or incorrect guesses.
+ - Computer Guessing: Test the computer's ability to guess the user's word and handle repeated letters and invalid inputs.
+ - Scoring: Confirm that scores are tracked correctly and displayed at the end of each round.
+ - Hints: Validate that hints are provided correctly when requested.
+ - Game Flow: Check the overall flow of the game, including transitions between rounds and the end-game scenario.
+
 ### Python
 Python was tested using PEP8ci [PEP8ci validator] https://pep8ci.herokuapp.com/#
 
@@ -205,15 +215,6 @@ There were many steps to deploying this project to Heroku:
  - The other option is to manually deploy, which is the choice I went for with this project.
 12. When all the code is received from GitHub there is a view button that a links to the running app, I clicked this to make sure everything was running as expected.
 
-
-### Manual Testing
- - Initial Setup: Verify that the game starts correctly and prompts the user for their name.
- - Rules Display: Check that the rules are displayed if the user opts to see them.
- - Word Guessing: Ensure the player can guess letters and receive feedback on correct or incorrect guesses.
- - Computer Guessing: Test the computer's ability to guess the user's word and handle repeated letters and invalid inputs.
- - Scoring: Confirm that scores are tracked correctly and displayed at the end of each round.
- - Hints: Validate that hints are provided correctly when requested.
- - Game Flow: Check the overall flow of the game, including transitions between rounds and the end-game scenario.
 
 ### Bugs Squashed
  - Fixed a bug where the computer guessed previously guessed letters.
