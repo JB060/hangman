@@ -152,7 +152,7 @@ The main functions and their purposes are as follows:
 ## Testing
 
 ### Python
-Python was tested using PEP8 [PEP8 validator] https://pep8ci.herokuapp.com/#
+Python was tested using PEP8ci [PEP8ci validator] https://pep8ci.herokuapp.com/#
 
 <img src="images/Errors after testing.png" alt= "errors shown from the validator">
 
@@ -213,7 +213,7 @@ There were many steps to deploying this project to Heroku:
 ## Credits 
 - [Lucid chart](https://www.lucidchart.com/pages/) - This was used to create the flow chart in the planning process for this project. 
 - [code beautifier](https://codebeautify.org/python-formatter-beautifier) - made the code look beautiful (as described LOL).
-- [PEP8 validator](https://pep8ci.herokuapp.com/#)- was used to check the code was valid.
+- [PEP8ci validator](https://pep8ci.herokuapp.com/#)- was used to check the code was valid.
 - Youtube - I watched many different YouTube videos on how to make a hangman using Python and learnt a lot from many people.
 - Marcel - My mentor Marcel was extremely helpful as always helping me feel confident in what I have made.
 
