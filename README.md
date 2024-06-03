@@ -74,16 +74,28 @@ Throughout the process of making this project, I decided to change a couple of t
 
 ### 1st selection (Correct)
 - As we can see on the screen we start off with "7" tries to guess the word the computer has chosen for us.
-  on this selection, the player has chosen correctly with the letter "T" and the letter has been printed in the word selected, and to the
+  on this selection, the player has chosen correctly the letter "T" and the letter has been printed in the word selected, and to the
   "letters guessed" area of the terminal and we get to keep all our tries.
 <img src="/images/7.png" alt= "">
 
 ### 2nd selection (incorrect)
 - The player has made an incorrect selection of the letter "A" and the 1st part of the hangman has been drawn to the terminal to show
   us that this is the situation, also the letter "A" has been printed to the "letters guessed" area of the terminal showing us that we have
-  already guessed these letters as to insure we don't guess again.
+  already guessed these letters as to ensure we don't guess again.
 <img src="/images/8.png" alt= "">
+
+### Player GUesse's Word correctly
+- In the screen below the player has gone on and correctly solved the computer word and we get a"congratulations" message
+  and it also displays what the word was that the computer has chosen for us to solve.
+  It then proceeds to ask us whether would like the computer to solve the word we have selected for the computer!
 <img src="/images/9.png" alt= "">
+
+### Part 2, Computers Turn 
+- In the image below we can see the computer has correctly guessed the last
+  letter of the word "K" and this is printed to the terminal but as the computer proceeds on with its tries
+  we can see that it has incorrectly guessed the rest of its tries.
+
+  
 <img src="/images/10.png" alt= "">
 <img src="/images/11.png" alt= "">
 <img src="/images/12.png" alt= "">
