@@ -75,6 +75,8 @@ Throughout the process of making this project, I decided to change a couple of t
   on this selection, the player has chosen correctly the letter "T" and the letter has been printed in the word selected, and to the
   "letters guessed" area of the terminal and we get to keep all our tries.
 <img src="/images/7.png" alt= "">
+#### area for guessed letters 
+<img src="/images/14.png" alt= "">
 
 ### 2nd selection (incorrect)
 - The player has made an incorrect selection of the letter "A" and the 1st part of the hangman has been drawn to the terminal to show
@@ -103,7 +105,7 @@ Throughout the process of making this project, I decided to change a couple of t
 <img src="/images/13.png" alt= "">
 
 
-<img src="/images/14.png" alt= "">
+
 <img src="/images/15.png" alt= "">
 <img src="/images/16.png" alt= "">
 
