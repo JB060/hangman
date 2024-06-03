@@ -154,7 +154,7 @@ The main functions and their purposes are as follows:
 ### Python
 Python was tested using PEP8 [PEP8 validator](http://pep8online.com/) 
 
-The Python results came back with the following:
+<img src="images/Errors after testing.png" alt= "errors shown from the validator">
 
 ## Deployment 
 There were many steps to deploying this project to Heroku:
