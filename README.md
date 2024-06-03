@@ -8,7 +8,8 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
 
 ## Table of contents
 ### Plans and structure
-<img src=""
+<img src= "images/hangmanflowchart.png" alt ="flow chart of structure">
+
 - How to Play
 - Rules
 - Features
