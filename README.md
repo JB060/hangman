@@ -84,7 +84,7 @@ Throughout the process of making this project, I decided to change a couple of t
   already guessed these letters as to ensure we don't guess again.
 <img src="/images/8.png" alt= "">
 
-### Player GUesse's Word correctly
+### Player Guesse's Word correctly
 - In the screen below the player has gone on and correctly solved the computer word and we get a"congratulations" message
   and it also displays what the word was that the computer has chosen for us to solve.
   It then proceeds to ask us whether would like the computer to solve the word we have selected for the computer!
