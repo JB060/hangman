@@ -26,7 +26,7 @@ Click here to go to the live website!: https://hangman-jb060-d0d13762f512.heroku
      - 2nd selection (incorrect)
      - Player Guesse's Word correctly
   - Part 2, Computers Turn
-  - Game End       
+- Game End       
 
 
 ### How to Play
