@@ -49,14 +49,27 @@ Throughout the process of making this project, I decided to change a couple of t
 
 ### Rules
 - Here the player is asked whether or not they would like to see the rules of the game a simple "Yes" or No" is typed.
-  - if the player types "yes" The rules of the game will be printed in the terminal.
+  - if the player types "yes" The game rules will be printed in the terminal.
   - if the player types "No" the game will proceed to the next stage without seeing the rules. 
   <img src="/images/2.png" alt= "">
 
-###
+### Player picks a word for the computer to guess.
+- On this screen, the player has typed "yes" to observe the game rules and the next step is for the player to pick any word from
+  the English dictionary for the computer to guess, after picking the word, it will show in the terminal how many letters the word contains. 
 <img src="/images/3.png" alt= "">
+
+### Hint (Computer)
+- On this screen, the player will type in a hint for the word they have selected previously for the computer to guess.
+  the word we picked was "Pink", so I would have given a hint of "Barbie's favorite color".
 <img src="/images/4.png" alt= "">
+
+### Part 1, Player's Turn 
+- On this screen, The computer has chosen a word from the dictionary of words we have given the game, the word has also been loaded with a hint
+  and the player can use this hint if necessary by typing in the word "Hint" where the prompt is in the terminal.
 <img src="/images/5.png" alt= "">
+
+### Hint (Player)
+- the player has chosen to use his "hint" and the hint has been printed in the terminal as:(Found in your mouth for chewing.
 <img src="/images/6.png" alt= "">
 <img src="/images/7.png" alt= "">
 <img src="/images/8.png" alt= "">
