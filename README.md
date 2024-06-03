@@ -107,8 +107,6 @@ Throughout the process of making this project, I decided to change a couple of t
 
 
 
-<img src="/images/15.png" alt= "">
-<img src="/images/16.png" alt= "">
 
 
 
