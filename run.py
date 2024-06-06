@@ -1,6 +1,5 @@
 import random
 
-
 def print_rules():
     print("\nHangman Rules:")
     print("1. The game is divided into two parts:")
@@ -16,7 +15,6 @@ def print_rules():
     print("8. You can ask for a hint if you are stuck, but use them wisely!")
     print("   Good luck!\n")
 
-
 def get_player_name():
     while True:
         player_name = input("Please enter your name: ").strip()
@@ -25,7 +23,6 @@ def get_player_name():
         else:
             print("Name cannot be empty. Please enter your name.")
 
-
 def get_yes_or_no(prompt):
     while True:
         response = input(prompt).strip().lower()
@@ -33,7 +30,6 @@ def get_yes_or_no(prompt):
             return response
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
-
 
 def play_game():
     print("Welcome to Hangman")
@@ -222,7 +218,13 @@ def play_game():
 
         random_word, hint = random.choice(list(word_dictionary.items()))
 
-        human_word = input("Enter a word for the computer to guess: ").strip().lower()
+        while True:
+            human_word = input("Enter a word for the computer to guess: ").strip().lower()
+            if human_word:
+                break
+            else:
+                print("Word cannot be empty. Please enter a word.")
+        
         human_hint = input("Enter a hint for the word: ").strip()
 
         display_word_length(human_word)
@@ -295,7 +297,7 @@ def play_game():
         display_selected_word(random_word)
 
         # Ask if the player wants the computer to guess their word
-        play_computer = get_yes_or_no("Would you like the computer to guess your word? (yes/no): ")
+        play_computer = get_yes_or_no("Would you like the computer to guess your word now? (yes/no): ")
         if play_computer == "yes":
             print("\nPart 2: Computer guesses the human's word")
             if play_computer_guess(human_word):
@@ -318,6 +320,5 @@ def play_game():
         play_game()
     else:
         print(f"Thank you for playing, {player_name}! Goodbye!")
-
 
 play_game()
